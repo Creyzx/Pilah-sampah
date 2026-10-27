@@ -175,13 +175,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const monthlyOrganik = organikKg * 30;
         const monthlyAnorganik = anorganikKg * 30;
 
+        // Perhitungan matematika dampak lingkungan
         const compost = (monthlyOrganik * 0.5).toFixed(1);
         const recycled = (monthlyAnorganik * 0.8).toFixed(1);
         const co2Saved = ((monthlyOrganik * 0.25) + (monthlyAnorganik * 1.5)).toFixed(1);
 
-        co2Result.textContent = `${co2Saved} kg`;
-        compostResult.textContent = `${compost} kg`;
-        recycleResult.textContent = `${recycled} kg`;
+        // Helper function untuk format ribuan bahasa Indonesia (Contoh: 1234567.5 -> 1.234.567,5)
+        const formatNumber = (numStr) => {
+            const num = parseFloat(numStr);
+            return num.toLocaleString('id-ID', { minimumFractionDigits: 0, maximumFractionDigits: 1 });
+        };
+
+        // Render data hasil ke elemen HTML dengan format rapi
+        co2Result.textContent = `${formatNumber(co2Saved)} kg`;
+        compostResult.textContent = `${formatNumber(compost)} kg`;
+        recycleResult.textContent = `${formatNumber(recycled)} kg`;
     }
 
     calculateBtn.addEventListener('click', calculateImpact);
