@@ -618,6 +618,10 @@ footer {
         display: none !important;
     }
 
+    .menu-btn {
+        display: none !important;
+    }
+
     /* 3. Optimalisasi Layout Utama Mobile */
     body {
         padding: 10px;
