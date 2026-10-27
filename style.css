@@ -462,6 +462,7 @@ body {
     gap: 15px;
 }
 
+/* Perbaikan Struktural untuk Kalkulator agar tidak hancur saat angka meluap */
 .result-card {
     background: white;
     padding: 20px;
@@ -469,6 +470,12 @@ body {
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     border: 1px solid var(--border-color);
+    
+    /* Mencegah luapan teks/angka panjang */
+    min-width: 0; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .result-card i {
@@ -478,8 +485,11 @@ body {
 }
 
 .result-card h3 {
-    font-size: 1.5rem;
+    /* Menggunakan fluid typography agar mengecil secara dinamis jika angka sangat panjang */
+    font-size: clamp(1.1rem, 4vw, 1.5rem); 
     color: var(--text-dark);
+    line-height: 1.3;
+    font-weight: 700;
 }
 
 .result-card p {
@@ -593,5 +603,97 @@ footer {
 
     .menu-btn {
         display: block;
+    }
+}
+
+/* Media Query untuk Mobile Device (Max-width 768px) */
+@media (max-width: 768px) {
+    /* 1. Sembunyikan Navigasi Teks di Navbar */
+    .nav-links {
+        display: none !important;
+    }
+    
+    /* 2. Sembunyikan Glass Card (Pilihanmu & Langkahmu) */
+    .glass-cards-row {
+        display: none !important;
+    }
+
+    /* 3. Optimalisasi Layout Utama Mobile */
+    body {
+        padding: 10px;
+    }
+
+    .navbar {
+        padding: 12px 20px;
+        border-radius: 30px;
+        margin-bottom: 15px;
+    }
+
+    .main-card {
+        padding: 20px 15px;
+        border-radius: 25px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-description-box {
+        padding: 12px 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* 4. Simulasi Interaktif: Layout Grid 2x2 & Hapus Ikon */
+    .bins-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important; /* Memaksa grid menjadi 2x2 */
+        gap: 12px !important;
+    }
+
+    .bin {
+        padding: 20px 10px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bin-icon {
+        display: none !important; /* Menghilangkan ikon tong sampah sesuai permintaan */
+    }
+
+    .bin-title {
+        font-size: 1rem;
+    }
+
+    /* 5. Optimalisasi Komponen Kalkulator & Hasil di Mobile */
+    .calc-wrapper {
+        gap: 20px;
+    }
+
+    .calc-inputs, .calc-results {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .calc-results {
+        grid-template-columns: 1fr; /* Stack vertikal di layar ultra-kecil jika diperlukan */
+        gap: 12px;
+    }
+    
+    @media (min-width: 480px) {
+        .calc-results {
+            grid-template-columns: repeat(3, 1fr); /* Tetap sejajar jika layar medium-mobile */
+        }
     }
 }
