@@ -42,7 +42,7 @@
 
 2. **Akses Langsung (Situs Web Aktif):**
    * Website dapat diakses secara langsung melalui tautan demo berikut:  
-     👉 
+     👉 https://creyzx.github.io/Pilah-sampah/
 
 ---
 
