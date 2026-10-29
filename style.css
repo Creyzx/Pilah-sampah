@@ -88,12 +88,9 @@ body {
     font-size: 1.3rem;
     color: white;
     cursor: pointer;
-<<<<<<< HEAD
     background: transparent;
     border: 0;
     padding: 8px;
-=======
->>>>>>> a6fa5b4129311d0f2e39961c765f0774c1466ba7
 }
 
 /* --- Main Card Container --- */
@@ -589,7 +586,6 @@ footer {
 
 /* --- Responsive --- */
 @media (max-width: 900px) {
-<<<<<<< HEAD
     .navbar {
         position: relative;
     }
@@ -641,19 +637,10 @@ footer {
 
     .hero-buttons,
     .glass-cards-row {
-=======
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-buttons, .glass-cards-row {
->>>>>>> a6fa5b4129311d0f2e39961c765f0774c1466ba7
         justify-content: center;
     }
 
     .earth-video-wrapper {
-<<<<<<< HEAD
         width: min(100%, 360px);
         height: auto;
         aspect-ratio: 1;
@@ -661,44 +648,11 @@ footer {
 }
 
 @media (max-width: 768px) {
-=======
-        width: 280px;
-        height: 280px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-}
-
-/* Media Query untuk Mobile Device (Max-width 768px) */
-@media (max-width: 768px) {
-    /* 1. Sembunyikan Navigasi Teks di Navbar */
-    .nav-links {
-        display: none !important;
-    }
-    
-    /* 2. Sembunyikan Glass Card (Pilihanmu & Langkahmu) */
-    .glass-cards-row {
-        display: none !important;
-    }
-
-    .menu-btn {
-        display: none !important;
-    }
-
-    /* 3. Optimalisasi Layout Utama Mobile */
->>>>>>> a6fa5b4129311d0f2e39961c765f0774c1466ba7
     body {
         padding: 10px;
     }
 
     .navbar {
-<<<<<<< HEAD
         padding: 10px 16px;
         border-radius: 24px;
         margin-bottom: 15px;
@@ -739,25 +693,6 @@ footer {
 
     .hero-description-box {
         padding: 12px 14px;
-=======
-        padding: 12px 20px;
-        border-radius: 30px;
-        margin-bottom: 15px;
-    }
-
-    .main-card {
-        padding: 20px 15px;
-        border-radius: 25px;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
-
-    .hero-description-box {
-        padding: 12px 15px;
->>>>>>> a6fa5b4129311d0f2e39961c765f0774c1466ba7
     }
 
     .hero-buttons {
@@ -770,7 +705,6 @@ footer {
         justify-content: center;
     }
 
-<<<<<<< HEAD
     .content-section {
         padding-top: 35px;
         margin-top: 35px;
@@ -934,49 +868,5 @@ footer {
 
     .tab-btn {
         padding: 9px 6px;
-=======
-    /* 4. Simulasi Interaktif: Layout Grid 2x2 & Hapus Ikon */
-    .bins-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr) !important; /* Memaksa grid menjadi 2x2 */
-        gap: 12px !important;
-    }
-
-    .bin {
-        padding: 20px 10px;
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .bin-icon {
-        display: none !important; /* Menghilangkan ikon tong sampah sesuai permintaan */
-    }
-
-    .bin-title {
-        font-size: 1rem;
-    }
-
-    /* 5. Optimalisasi Komponen Kalkulator & Hasil di Mobile */
-    .calc-wrapper {
-        gap: 20px;
-    }
-
-    .calc-inputs, .calc-results {
-        flex: 1 1 100%;
-        width: 100%;
-    }
-
-    .calc-results {
-        grid-template-columns: 1fr; /* Stack vertikal di layar ultra-kecil jika diperlukan */
-        gap: 12px;
-    }
-    
-    @media (min-width: 480px) {
-        .calc-results {
-            grid-template-columns: repeat(3, 1fr); /* Tetap sejajar jika layar medium-mobile */
-        }
->>>>>>> a6fa5b4129311d0f2e39961c765f0774c1466ba7
     }
 }
