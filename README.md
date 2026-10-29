@@ -49,7 +49,8 @@
 ---
 
 ## E. Identitas Pengembang
-* **Nama Lengkap:** Satria Fajar Hidayatulloh Widargo
+* **Nama Peserta 1:** AVIAN REZKY MAHARDIKA 
+* **Nama Peserta 2:** Satria Fajar Hidayatulloh Widargo
 * **Kelas:** 11/XI
 * **Jurusan:** Rekayasa Perangkat Lunnak
 * **Asal Sekolah:** Smk Negeri 2 Singosari
