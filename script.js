@@ -22,11 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDisplay = document.getElementById('score');
     const countDisplay = document.getElementById('item-count');
     const resetButton = document.getElementById('reset-game');
-<<<<<<< HEAD
     const navbar = document.querySelector('.navbar');
     const menuButton = document.querySelector('.menu-btn');
-=======
->>>>>>> a6fa5b4129311d0f2e39961c765f0774c1466ba7
 
     // Element Modal Pop-up Feedback
     const modal = document.getElementById('game-modal');
@@ -149,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modalBtnRestart.addEventListener('click', initGame);
     resetButton.addEventListener('click', initGame);
 
-<<<<<<< HEAD
     menuButton.addEventListener('click', () => {
         const isOpen = navbar.classList.toggle('nav-open');
         menuButton.setAttribute('aria-expanded', String(isOpen));
@@ -166,8 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-=======
->>>>>>> a6fa5b4129311d0f2e39961c765f0774c1466ba7
     // ==========================================
     // 2. TABS & KALKULATOR DAMPAK
     // ==========================================
