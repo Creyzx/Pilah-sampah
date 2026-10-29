@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PilahSampah - Solusi Kelestarian Lingkungan</title>
+    <!-- Font & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-leaf"></i>
+            <span>PILAH<strong>SAMPAH</strong></span>
+        </div>
+        <nav>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#home" class="active">Beranda</a></li>
+                <li><a href="#game">Simulasi Pilah</a></li>
+                <li><a href="#edu">Edukasi Kategori</a></li>
+                <li><a href="#kalkulator">Kalkulator Dampak</a></li>
+            </ul>
+        </nav>
+        <button class="menu-btn" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="primary-navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-card">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-left">
+                <span class="badge"><i class="fa-solid fa-globe"></i> Ubah Dunia, Hiduplah Ekologis!</span>
+                <h1 class="hero-title">Ubah Dunia,<br>Hiduplah <span>Ekologis!</span></h1>
+                
+                <div class="glass-cards-row">
+                    <div class="glass-mini-card">
+                        <div class="card-img-placeholder green-tree-bg">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <span>Pilihanmu</span>
+                    </div>
+                    <div class="glass-mini-card">
+                        <div class="card-img-placeholder earth-tree-bg">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <span>Langkahmu</span>
+                    </div>
+                </div>
+
+                <div class="hero-description-box">
+                    <h3>Selamat datang di PilahSampah!</h3>
+                    <p>Di dunia tempat kepedulian terhadap planet ini semakin relevan, PilahSampah berusaha menginspirasi kita semua untuk menciptakan gaya hidup yang berkelanjutan dan ramah lingkungan.</p>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#game" class="btn btn-primary"><i class="fa-solid fa-gamepad"></i> Coba Simulasi</a>
+                    <a href="#edu" class="btn btn-secondary">Pelajari Kategori</a>
+                </div>
+            </div>
+
+            <!-- Rotating Earth Video Feature -->
+            <div class="hero-right">
+                <div class="earth-video-wrapper">
+                    <video autoplay loop muted playsinline class="earth-video">
+                        <source src="Assets/Animasi Rotasi Bumi.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung tag video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Game Section -->
+        <section id="game" class="content-section">
+            <div class="section-title">
+                <h2>Simulasi Interaktif Pilah Sampah</h2>
+                <p>Pilih sampah di bawah lalu klik tempat sampah yang sesuai!</p>
+            </div>
+
+            <div class="game-dashboard">
+                <div class="score-board">
+                    <div>Skor: <span id="score">0</span></div>
+                    <div>Sisa Sampah: <span id="item-count">0</span></div>
+                </div>
+
+                <div class="waste-items-container" id="waste-source"></div>
+
+                <!-- Bins tanpa teks deskripsi petunjuk -->
+                <div class="bins-container">
+                    <div class="bin" data-type="organik">
+                        <div class="bin-icon"><i class="fa-solid fa-apple-whole"></i></div>
+                        <div class="bin-title">ORGANIK</div>
+                    </div>
+                    <div class="bin" data-type="anorganik">
+                        <div class="bin-icon"><i class="fa-solid fa-bottle-water"></i></div>
+                        <div class="bin-title">ANORGANIK</div>
+                    </div>
+                    <div class="bin" data-type="b3">
+                        <div class="bin-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="bin-title">B3 (BERBAHAYA)</div>
+                    </div>
+                    <div class="bin" data-type="residu">
+                        <div class="bin-icon"><i class="fa-solid fa-trash-can"></i></div>
+                        <div class="bin-title">RESIDU</div>
+                    </div>
+                </div>
+
+                <div class="game-controls">
+                    <button id="reset-game" class="btn btn-primary"><i class="fa-solid fa-rotate-right"></i> Muat Ulang Game</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational Category Section -->
+        <section id="edu" class="content-section">
+            <div class="section-title">
+                <h2>Panduan Kategori Sampah</h2>
+                <p>Pahami perbedaan jenis sampah dan cara pengelolaan yang tepat.</p>
+            </div>
+
+            <div class="edu-tabs">
+                <button class="tab-btn active" data-tab="tab-organik">Organik</button>
+                <button class="tab-btn" data-tab="tab-anorganik">Anorganik</button>
+                <button class="tab-btn" data-tab="tab-b3">Bahan B3</button>
+                <button class="tab-btn" data-tab="tab-residu">Residu</button>
+            </div>
+
+            <div class="tab-content active" id="tab-organik">
+                <div class="edu-card">
+                    <div class="edu-info">
+                        <h3><i class="fa-solid fa-leaf"></i> Sampah Organik (Warna Hijau)</h3>
+                        <p>Sampah yang berasal dari sisa makhluk hidup yang mudah membusuk dan terurai secara alami.</p>
+                        <h4>Contoh:</h4>
+                        <ul>
+                            <li>Sisa makanan & kulit buah</li>
+                            <li>Daun kering & ranting</li>
+                            <li>Tulang ikan/daging</li>
+                        </ul>
+                        <h4>Cara Pengelolaan:</h4>
+                        <p>Dapat diolah menjadi pupuk kompos buatan rumah, dimanfaatkan sebagai pakan maggot, atau dijadikan biopori.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-anorganik">
+                <div class="edu-card">
+                    <div class="edu-info">
+                        <h3><i class="fa-solid fa-box-archive"></i> Sampah Anorganik (Warna Kuning)</h3>
+                        <p>Sampah yang dihasilkan dari bahan non-hayati atau produk sintetik yang dapat didaur ulang.</p>
+                        <h4>Contoh:</h4>
+                        <ul>
+                            <li>Botol & gelas plastik</li>
+                            <li>Kardus, kertas, dan koran</li>
+                            <li>Kaleng minuman & wadah kaca</li>
+                        </ul>
+                        <h4>Cara Pengelolaan:</h4>
+                        <p>Bersihkan dari sisa cairan, pilah sesuai jenis material, lalu setorkan ke Bank Sampah terdekat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-b3">
+                <div class="edu-card">
+                    <div class="edu-info">
+                        <h3><i class="fa-solid fa-skull-crossbones"></i> Sampah B3 / Berbahaya (Warna Merah)</h3>
+                        <p>Sampah yang mengandung zat beracun, berbahaya, atau mudah meledak/terbakar.</p>
+                        <h4>Contoh:</h4>
+                        <ul>
+                            <li>Baterai bekas & aki kendaraan</li>
+                            <li>Lampu neon & bohlam rusak</li>
+                            <li>Botol detergen & obat kadaluarsa</li>
+                        </ul>
+                        <h4>Cara Pengelolaan:</h4>
+                        <p>Pisahkan dalam wadah khusus dan serahkan ke fasilitas pengolahan limbah B3 atau Dropbox B3 kota.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-residu">
+                <div class="edu-card">
+                    <div class="edu-info">
+                        <h3><i class="fa-solid fa-trash-slash"></i> Sampah Residu (Warna Abu-abu)</h3>
+                        <p>Sampah yang sulit didaur ulang karena kontaminasi atau ketiadaan teknologi daur ulang.</p>
+                        <h4>Contoh:</h4>
+                        <ul>
+                            <li>Popok sekali pakai & pembalut</li>
+                            <li>Tisu basah/kering kotor</li>
+                            <li>Struk belanja & puntung rokok</li>
+                        </ul>
+                        <h4>Cara Pengelolaan:</h4>
+                        <p>Kumpulkan secara rapi untuk diangkut oleh petugas ke TPA (Tempat Pemrosesan Akhir).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Calculator Section -->
+        <section id="kalkulator" class="content-section">
+            <div class="section-title">
+                <h2>Kalkulator Dampak Pemilahan</h2>
+                <p>Hitung estimasi kontribusi positif pemilahan sampah Anda dalam 1 bulan.</p>
+            </div>
+
+            <div class="calc-wrapper">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label for="input-organik">Sampah Organik Harian (kg):</label>
+                        <input type="number" id="input-organik" min="0" value="1" step="0.5">
+                    </div>
+                    <div class="input-group">
+                        <label for="input-anorganik">Sampah Anorganik Harian (kg):</label>
+                        <input type="number" id="input-anorganik" min="0" value="0.5" step="0.1">
+                    </div>
+                    <button id="btn-calculate" class="btn btn-primary"><i class="fa-solid fa-calculator"></i> Hitung Dampak Saya</button>
+                </div>
+
+                <div class="calc-results">
+                    <div class="result-card">
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        <h3 id="co2-result">0 kg</h3>
+                        <p>Pengurangan Emisi CO2 / Bulan</p>
+                    </div>
+                    <div class="result-card">
+                        <i class="fa-solid fa-seedling"></i>
+                        <h3 id="compost-result">0 kg</h3>
+                        <p>Potensi Pupuk Kompos / Bulan</p>
+                    </div>
+                    <div class="result-card">
+                        <i class="fa-solid fa-recycle"></i>
+                        <h3 id="recycle-result">0 kg</h3>
+                        <p>Material Terdaut Ulang / Bulan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Pop-up Feedback Game -->
+    <div class="modal-overlay" id="game-modal">
+        <div class="modal-box">
+            <div class="modal-icon" id="modal-icon">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <h3 id="modal-title">Jawaban Kurang Tepat!</h3>
+            <p id="modal-message">Botol Plastik seharusnya dimasukkan ke tempat sampah ANORGANIK.</p>
+            <div class="modal-actions">
+                <button id="modal-btn-retry" class="btn btn-primary"><i class="fa-solid fa-rotate-left"></i> Coba Lagi</button>
+                <button id="modal-btn-restart" class="btn btn-secondary"><i class="fa-solid fa-rotate-right"></i> Ulang Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 PilahSampah - Inisiatif Lingkungan Bebas Polusi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
