@@ -33,14 +33,7 @@
 ---
 
 ## D. Panduan Penggunaan
-1. **Penggunaan Lokal (Offline/Online):**
-   * Unduh atau *clone* repositori ini:
-     ```bash
-     
-     ```
-   * Buka folder repositori dan klik ganda file `index.html` pada peramban web (*browser*) favorit Anda.
-
-2. **Akses Langsung (Situs Web Aktif):**
+1. **Akses Langsung (Situs Web Aktif):**
    * Website dapat diakses secara langsung melalui tautan demo berikut:  
      👉 https://creyzx.github.io/Pilah-sampah/
 
