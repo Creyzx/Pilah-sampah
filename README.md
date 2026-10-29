@@ -1,7 +1,5 @@
 # PilahSampah - Web Interaktif Edukasi & Simulasi Pilah Sampah
 
-![PilahSampah Banner](Assets/Animasi%20Rotasi%20Bumi.mp4)
-
 ## A. Judul & Deskripsi
 * **Nama Produk Digital:** PilahSampah (EcoLife Experience)
 * **Latar Belakang Masalah:**  
